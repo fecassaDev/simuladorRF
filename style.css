@@ -1,13 +1,30 @@
 @import url("https://use.typekit.net/wgl2ode.css");
 
+/*-------------------------------------------------
+# CSS Reset
+-------------------------------------------------*/
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: poppins, sans-serif;
 }
 
+/*-------------------------------------------------
+# Elements
+-------------------------------------------------*/
 body {
   color: #777;  
+}
+
+button{
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 13px;
+}
+
+button:hover{
+  scale: 1.1;
 }
 
 h1, h2, h3{
@@ -15,16 +32,13 @@ h1, h2, h3{
   color:#418883;
 }
 
-h2 {
-  padding-bottom: 40px;
-}
-h3 {
-  padding-bottom: 20px;
-}
-
 label,
 p {
   display: block;  
+}
+
+label{
+  margin-bottom: 10px;
 }
 
 form {
@@ -32,27 +46,19 @@ form {
   padding: 15px;
 }
 
-@media screen and (min-width: 768px) {
-   form {
-    width: 768px;
-    margin: auto;
-   }
+span{
+  background-color: #f2f2f2;
+  border-style: solid;
+  font-size: 1rem;    
+  padding: 13px 10px;
+  white-space: nowrap;
 }
 
-.input_values {  
-  margin-bottom: 40px;
+span, input{
+  border-color: #777;    
 }
 
-.input_values label{
-  margin-bottom: 10px;
-}
-
-.input_values div {
-  display: flex;    
-  margin-bottom: 20px;
-}
-
-input {  
+input[type="text"] {  
   color: #777;
   font-size: 1rem;
   line-height: 1.5em;
@@ -61,34 +67,26 @@ input {
   padding: 13px 10px;
 }
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+header{
+  margin:40px 0px;
+  text-align: center;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance:textfield;
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
+header h2{
+  width: 80%;
+  margin: auto;
 }
 
-
-span{
-    background-color: #f2f2f2;
-    border-style: solid;
-    font-size: 1rem;    
-    padding: 13px 10px;
-    white-space: nowrap;
+/*-------------------------------------------------
+# Text
+-------------------------------------------------*/
+.capitalize{
+  text-transform: capitalize;
 }
 
-span, input{
-    border-color: #777;    
-}
-
-/*Progress bar*/
+/*-------------------------------------------------
+# Step bar
+-------------------------------------------------*/
 .steps-container {
   display: flex;
   justify-content: center;
@@ -118,7 +116,21 @@ span, input{
   top: 50%;
 }
 
-/*Borders*/
+@media screen and (min-width: 768px) {
+   form {
+    width: 768px;
+    margin: auto;
+   }
+}
+
+/*-------------------------------------------------
+# values section
+-------------------------------------------------*/
+.input_values div {
+  display: flex;    
+  margin-bottom: 20px;
+}
+
 .input-values-input_1 span{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;    
@@ -143,27 +155,9 @@ span, input{
     border-width : 2px 0 2px 2px;
 }
 
-/*Buttons*/
-.buttons{
-  display: flex;
-  justify-content: space-between;
-}
-
-.b_align_left{
-  justify-content: right;
-}
-
-.b_space_between{
-  justify-content: space-between;
-}
-
-button{
-  border-radius: 15px;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 10px 13px;
-}
-
+/*-------------------------------------------------
+# Buttons
+-------------------------------------------------*/
 .btn-next{
   color: #35495e;
   background-color: transparent;
@@ -177,22 +171,9 @@ button{
   border: 2px solid #35495e;;
 }
 
-button:hover{
-  scale: 1.1;
-}
-
-/*header*/
-header{
-  margin:40px 0px;
-  text-align: center;
-}
-
-header h2{
-  width: 80%;
-  margin: auto;
-}
-
-/*Simulation results*/
+/*-------------------------------------------------
+# Results
+-------------------------------------------------*/
 .result-container{
   background-color: #f2f2f2;
   border-radius: 15px;
@@ -211,10 +192,32 @@ header h2{
   text-align: center;  
 }
 
-.capitalize{
-  text-transform: capitalize;
-}
-
 .isHidden{
   display: none;
+}
+
+/*-------------------------------------------------
+# Padding / Margins
+-------------------------------------------------*/
+.pb_2{ 
+  padding-bottom: 20px; 
+}
+
+.pb_4{
+  padding-bottom: 40px;
+}
+
+.mb_4{
+  margin-bottom: 40px;
+}
+
+/*-------------------------------------------------
+# Align
+-------------------------------------------------*/
+.align_left{
+  justify-content: right;
+}
+
+.space_between{
+  justify-content: space-between;
 }

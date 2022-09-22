@@ -8,17 +8,17 @@
     <title>Simulador de Investimentos</title>
   </head>
   <body>
-    <div id="simulaApp">
+    <div id="myApp">
       <header>
-        <h2>Simulador de investimentos</h2>
+        <h2 class="pb_4">Simulador de investimentos</h2>
         <div class="steps-container">
           <div class="step step_active"></div>
           <div class="step" :class="{step_active: isStep2Active}"></div>
         </div>
       </header>
       <form ref="myForm" action="" id="simulator" v-on:submit.prevent="submitSimulation">
-        <div :class="{input_values:true, isHidden:isStep2Active}">
-          <h3 class="capitalize">juros compostos</h3>
+        <div :class="{input_values:true, mb_4:true, isHidden:isStep2Active}">
+          <h3 class="capitalize pb_2">juros compostos</h3>
           <label for="amount">Valor que você vai investir</label>
           <div class="input-values-input_1">
             <span>R$</span>
@@ -31,6 +31,8 @@
               v-on:keypress="NumericValidation"
               v-on:keyup="AutoFormat"
               ref="amoutSimulation"
+              required
+              inputmode="numeric"
             />
           </div>
           <label for="deadline">Prazo ou vencimento</label>
@@ -43,6 +45,7 @@
               v-on:keypress="NumericValidation"
               autocomplete="off"              
               ref="deadlineSimulation"
+              required
             /><span>meses</span>
           </div>
           <label for="profitability">Rentabilidade</label>
@@ -56,14 +59,15 @@
               v-on:keypress="NumericValidation"
               v-on:keyup="AutoFormat"
               ref="taxSimulation"
+              required
             /><span>% ao ano</span>
           </div>
-          <div class="buttons b_align_left">            
+          <div class="buttons align_left">            
             <button class="button btn-next" formaction="/proximo" v-on:click="SetFormAction('Calcular')">Próximo</button>
           </div>  
         </div>
         <div :class="{input_values:true, isHidden:!isStep2Active}" >
-          <h3>Resultado da simulação</h3>
+          <h3 class="capitalize pb_2">Resultado da simulação</h3>
           <p class="result-title capitalize">dinheiro investido</p>
           <div class="result-container">
             <p class="result-value">{{valorInvestido}}</p>
@@ -76,7 +80,7 @@
           <div class="result-container">
             <p class="result-value">{{totalAcumulado}}</p>
           </div>    
-          <div class="buttons b_space_between">
+          <div class="buttons space_between">
             <button class="button btn-previous" v-on:click="SetFormAction('Voltar')">Voltar</button>
             <button class="button btn-next" v-on:click="SetFormAction('Reset')">Reset</button>            
           </div>  

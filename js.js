@@ -91,4 +91,4 @@ const myApp = Vue.createApp({
   },
 });
 
-myApp.mount("#simulaApp");
+myApp.mount("#myApp");
