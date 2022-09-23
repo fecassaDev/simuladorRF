@@ -20,7 +20,7 @@
         <div :class="{input_values:true, mb_4:true, isHidden:isStep2Active}">
           <h3 class="capitalize pb_2">juros compostos</h3>
           <label for="amount">Valor que você vai investir</label>
-          <div class="input-values-input_1">
+          <div class="input-values-input">
             <span>R$</span>
             <input
               type="text"                  
@@ -32,11 +32,11 @@
               v-on:keyup="AutoFormat"
               ref="amoutSimulation"
               required
-              inputmode="numeric"
+              inputmode="tel"
             />
           </div>
           <label for="deadline">Prazo ou vencimento</label>
-          <div class="input-values-input_2">
+          <div class="input-values-input">
             <input
               type="text"
               name=""
@@ -49,7 +49,7 @@
             /><span>meses</span>
           </div>
           <label for="profitability">Rentabilidade</label>
-          <div class="input-values-input_3">
+          <div class="input-values-input">
             <input
               type="text"
               name=""                            

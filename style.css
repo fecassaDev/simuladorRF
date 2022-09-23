@@ -48,17 +48,15 @@ form {
 
 span{
   background-color: #f2f2f2;
-  border-style: solid;
   font-size: 1rem;    
   padding: 13px 10px;
   white-space: nowrap;
 }
 
-span, input{
-  border-color: #777;    
-}
+
 
 input[type="text"] {  
+  border:none;
   color: #777;
   font-size: 1rem;
   line-height: 1.5em;
@@ -126,33 +124,16 @@ header h2{
 /*-------------------------------------------------
 # values section
 -------------------------------------------------*/
+.input-values-input{
+  border-radius: 15px;
+  border-color: #777;    
+  border-width: 2px;
+  border-style: solid;
+  overflow: hidden;
+}
 .input_values div {
   display: flex;    
   margin-bottom: 20px;
-}
-
-.input-values-input_1 span{
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;    
-    border-width : 2px 0 2px 2px;
-}
-
-.input-values-input_1 input{
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-width : 2px 2px 2px 0;
-}
-
-.input-values-input_2 span, .input-values-input_3 span{
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;    
-    border-width : 2px 2px 2px 0;
-}
-
-.input-values-input_2 input, .input-values-input_3 input{
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-width : 2px 0 2px 2px;
 }
 
 /*-------------------------------------------------
