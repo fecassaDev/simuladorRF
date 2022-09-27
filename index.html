@@ -33,7 +33,7 @@
               v-on:keyup="AutoFormat"
               ref="amoutSimulation"
               required
-              inputmode="tel"
+              inputmode="numeric"
             />
           </div>
           <label for="deadline">Prazo ou vencimento</label>
@@ -47,7 +47,7 @@
               autocomplete="off"              
               ref="deadlineSimulation"
               required
-              inputmode="tel"
+              inputmode="numeric"
             /><span>meses</span>
           </div>
           <label for="profitability">Rentabilidade</label>
@@ -62,7 +62,7 @@
               v-on:keyup="AutoFormat"
               ref="taxSimulation"
               required
-              inputmode="tel"
+              inputmode="decimal"
             /><span>% ao ano</span>
           </div>
           <div class="buttons align_left">            
