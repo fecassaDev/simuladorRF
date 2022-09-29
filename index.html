@@ -33,7 +33,10 @@
       name="description"
       content="Cálculo de juros compostos para análise de aplicações financeiras. Em breve mais opções de cálculos e simulações de investimentos"
     />
-    <meta name="keywords" content="SELIC, IPCA, IBOV, Juros compostos, Investimentos, finanças, educação financeira" />
+    <meta
+      name="keywords"
+      content="SELIC, IPCA, IBOV, Juros compostos, Investimentos, finanças, educação financeira"
+    />
     <title>Simulador de Investimentos</title>
   </head>
   <body>
@@ -51,11 +54,11 @@
         id="simulator"
         v-on:submit.prevent="submitSimulation"
       >
-        <div :class="{input_values:true, mb_4:true, isHidden:isStep2Active}">
+        <div :class="{input_values:true, min_height:true,mb_4:true, isHidden:isStep2Active}">
           <h3 class="capitalize pb_2">juros compostos</h3>
           <label for="amount">Valor que você vai investir</label>
           <div class="input-values-input">
-            <span>R$</span>
+            <span class="legenda">R$</span>
             <input
               type="text"
               name=""
@@ -81,7 +84,7 @@
               ref="deadlineSimulation"
               required
               inputmode="decimal"
-            /><span>meses</span>
+            /><span class="legenda">meses</span>
           </div>
           <label for="profitability">Rentabilidade</label>
           <div class="input-values-input">
@@ -96,9 +99,9 @@
               ref="taxSimulation"
               required
               inputmode="decimal"
-            /><span>% ao ano</span>
+            /><span class="legenda">% ao ano</span>
           </div>
-          <div class="buttons align_left">
+          <div class="buttons align_left mt_4">
             <button
               class="button btn-next"
               formaction="/proximo"
@@ -122,7 +125,7 @@
           <div class="result-container">
             <p class="result-value">{{totalAcumulado}}</p>
           </div>
-          <div class="buttons space_between">
+          <div class="buttons space_between mt_4">
             <button
               class="button btn-previous"
               v-on:click="SetFormAction('Voltar')"
@@ -133,6 +136,64 @@
               Reset
             </button>
           </div>
+        </div>
+        <div class="input_values">
+          <h3 class="pb_2">Como funciona a fórmula de juros compostos?</h3>
+          <p>
+            Juros compostos ou simplesmente juros sobre juros é calculado
+            utilizando a seguinte fórmula:
+          </p>
+          <p class="formula">A = P (1 + i) ^ t</p>
+          <p>
+            Para entender melhor a fórmula segue a explicação de cada variável:
+          </p>
+          <ul>
+            <li><span class="formula">A</span> = valor final, ou seja, o resultado que você terá;</li>
+            <li><span class="formula">P</span> = valor inicial depositado;</li>
+            <li><span class="formula">i</span> = taxa de juros;</li>
+            <li><span class="formula">t</span> = tempo do investimento.</li>
+          </ul>
+          <p>
+            É importante lembrar que a taxa de juros e o tempo devem estar na
+            mesma unidade. Entretanto, a grande maioria das aplicações
+            financeiras são oferecidas informando a taxa de juros em anos e o
+            prazo de vencimento em meses, e desta forma, esta aplicação
+            transforma a rentabilidade anual informada em rentabilidade mensal
+            usando a seguinte formula:
+          </p>
+          <p class="formula">Iq = [(1 + It)^q/t – 1] x 100</p>
+          <ul class="mb_4">
+            <li><span class="formula">Iq</span> = taxa de juros no período que você quer;</li>
+            <li><span class="formula">It</span> = taxa de juros no período que você tem;</li>
+            <li><span class="formula">q</span> = período que você quer;</li>
+            <li><span class="formula">t</span> = período que você tem.</li>
+          </ul>
+          <h3 class="pb_2">Diferença entre juros simples e juros compostos</h3>
+          <p>
+            A diferença entre o comportamento dos juros simples e o dos juros
+            compostos, a curto prazo, é bastante sutil, mas, no decorrer do
+            tempo, os juros compostos são bem mais vantajosos.
+          </p>
+          <p>
+            Acontece que o juros simples é sempre calculado sobre o valor
+            inicial da transação. Por exemplo, se você aplica R$500 com juros
+            simples de 10 % ao mês, isso significa que todo mês aquele capital
+            renderá 10 % de R$500, ou seja, R$50, independentemente do tempo que
+            ele permanecer lá. O juros simples é comum para o atraso de contas,
+            como de água e energia. A cada dia de atraso, a soma dá-se com um
+            valor fixo calculado em cima da conta.
+          </p>
+          <p>
+            Já o juros composto, pensando no mesmo valor e na mesma taxa, no
+            primeiro mês, seu rendimento é calculado em cima do valor anterior.
+            Por exemplo, no primeiro mês, os 10% serão calculados em cima dos
+            R$500, gerando R$50 de juros e um montante de R$550. No próximo mês,
+            os 10 % serão calculados em cima do valor atual do montante, ou
+            seja, 10 % de R$550, gerando um juros de R$55, e assim
+            sucessivamente. Dessa forma, para investimentos, o juros composto é
+            mais vantajoso. Ele é bastante comum exatamente nesse segmento de
+            investimentos, como a poupança.
+          </p>
         </div>
       </form>
     </div>

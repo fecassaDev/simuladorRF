@@ -34,7 +34,9 @@ h1, h2, h3{
 
 label,
 p {
-  display: block;  
+  display: block; 
+  line-height: 1.5em;
+  padding-bottom: 20px;
 }
 
 label{
@@ -46,14 +48,13 @@ form {
   padding: 15px;
 }
 
-span{
-  background-color: #f2f2f2;
-  font-size: 1rem;    
-  padding: 13px 10px;
-  white-space: nowrap;
+ul{
+  padding-bottom: 20px;
 }
 
-
+li{
+  line-height: 1.5em;
+}
 
 input[type="text"] {  
   border:none;
@@ -82,6 +83,10 @@ header h2{
   text-transform: capitalize;
 }
 
+.formula{
+  font-weight: 600;
+}
+
 ::-moz-selection { /* Code for Firefox */
   color: #f2f2f2;
   background: #418883;
@@ -91,6 +96,14 @@ header h2{
   color: #f2f2f2;
   background: #418883;
 }
+
+.legenda{
+  background-color: #f2f2f2;
+  font-size: 1rem;    
+  padding: 13px 10px;
+  white-space: nowrap;
+}
+
 
 /*-------------------------------------------------
 # Step bar
@@ -202,7 +215,9 @@ header h2{
 .mb_4{
   margin-bottom: 40px;
 }
-
+.mt_4{
+  margin-top: 40px;
+}
 /*-------------------------------------------------
 # Align
 -------------------------------------------------*/
@@ -212,4 +227,7 @@ header h2{
 
 .space_between{
   justify-content: space-between;
+}
+.min_height{
+  min-height: 100vh;
 }
