@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397509040409496" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XT750B755R"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XT750B755R");
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397509040409496"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +54,9 @@
         id="simulator"
         v-on:submit.prevent="submitSimulation"
       >
-        <div :class="{input_values:true, min_height:true,mb_4:true, isHidden:isStep2Active}">
+        <div
+          :class="{input_values:true, min_height:true,mb_4:true, isHidden:isStep2Active}"
+        >
           <h3 class="capitalize pb_2">juros compostos</h3>
           <label for="amount">Valor que você vai investir</label>
           <div class="input-values-input">
@@ -130,7 +150,10 @@
             Para entender melhor a fórmula segue a explicação de cada variável:
           </p>
           <ul>
-            <li><span class="formula">A</span> = valor final, ou seja, o resultado que você terá;</li>
+            <li>
+              <span class="formula">A</span> = valor final, ou seja, o resultado
+              que você terá;
+            </li>
             <li><span class="formula">P</span> = valor inicial depositado;</li>
             <li><span class="formula">i</span> = taxa de juros;</li>
             <li><span class="formula">t</span> = tempo do investimento.</li>
@@ -145,8 +168,14 @@
           </p>
           <p class="formula">Iq = [(1 + It)^q/t – 1] x 100</p>
           <ul class="mb_4">
-            <li><span class="formula">Iq</span> = taxa de juros no período que você quer;</li>
-            <li><span class="formula">It</span> = taxa de juros no período que você tem;</li>
+            <li>
+              <span class="formula">Iq</span> = taxa de juros no período que
+              você quer;
+            </li>
+            <li>
+              <span class="formula">It</span> = taxa de juros no período que
+              você tem;
+            </li>
             <li><span class="formula">q</span> = período que você quer;</li>
             <li><span class="formula">t</span> = período que você tem.</li>
           </ul>
