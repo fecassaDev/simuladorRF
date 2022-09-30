@@ -66,9 +66,8 @@ const myApp = Vue.createApp({
 
       //Converter taxa mensal para anual
       //Fórmula: iM = [(1 + iA)^q/t – 1] x 100
-      var $iM = (Math.pow(1 + $taxaAnual / 100, 1 / 12) - 1) * 100;
-      $iM = $iM.toFixed(4);
-
+      var $iM = (Math.pow(1 + $taxaAnual / 100, 1 / 12) - 1) * 100;      
+      
       //Calculo de Juros compostos
       //Fórmula:  M = C (1+i)^t
       var $montante = $principal * Math.pow(1 + $iM / 100, $prazo);
