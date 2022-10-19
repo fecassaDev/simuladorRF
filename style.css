@@ -166,8 +166,7 @@ header h2{
 # Buttons
 -------------------------------------------------*/
 .btn-next{
-  color: #35495e;
-  background-color: transparent;
+  color: #35495e;  
   border: 2px solid #35495e;
 
 }

@@ -15,11 +15,11 @@
 
       gtag("config", "G-XT750B755R");
     </script>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397509040409496"
-      crossorigin="anonymous"
-    ></script>
+     <script
+     async
+     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397509040409496"
+     crossorigin="anonymous"
+   ></script>   
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,91 +50,7 @@
         id="simulator"
         v-on:submit.prevent="submitSimulation"
       >
-        <div
-          :class="{input_values:true, min_height:true,mb_4:true, isHidden:isStep2Active}"
-        >
-          <h3 class="capitalize pb_2">juros compostos</h3>
-          <label for="amount">Valor que você vai investir</label>
-          <div class="input-values-input">
-            <span class="legenda">R$</span>
-            <input
-              type="text"
-              name=""
-              id="amount"
-              placeholder="0,00"
-              autocomplete="off"
-              v-on:keypress="NumericValidation"
-              v-on:keyup="AutoFormat"
-              ref="amoutSimulation"
-              required
-              inputmode="decimal"
-            />
-          </div>
-          <label for="deadline">Prazo ou vencimento</label>
-          <div class="input-values-input">
-            <input
-              type="text"
-              name=""
-              id="deadline"
-              placeholder="Digite o número"
-              v-on:keypress="NumericValidation"
-              autocomplete="off"
-              ref="deadlineSimulation"
-              required
-              inputmode="decimal"
-            /><span class="legenda">meses</span>
-          </div>
-          <label for="profitability">Rentabilidade</label>
-          <div class="input-values-input">
-            <input
-              type="text"
-              name=""
-              id="profitability"
-              placeholder="Digite o número"
-              autocomplete="off"
-              v-on:keypress="NumericValidation"
-              v-on:keyup="AutoFormat"
-              ref="taxSimulation"
-              required
-              inputmode="decimal"
-            /><span class="legenda">% ao ano</span>
-          </div>
-          <div class="buttons align_left mt_4">
-            <button
-              class="button btn-next"
-              formaction="/proximo"
-              v-on:click="SetFormAction('Calcular')"
-            >
-              Próximo
-            </button>
-          </div>
-        </div>
-        <div :class="{input_values:true, mb_4:true, isHidden:!isStep2Active}">
-          <h3 class="capitalize pb_2">Resultado da simulação</h3>
-          <p class="result-title capitalize">dinheiro investido</p>
-          <div class="result-container">
-            <p class="result-value">{{valorInvestido}}</p>
-          </div>
-          <p class="result-title capitalize">juros ganhos no período</p>
-          <div class="result-container">
-            <p class="result-value">{{juros}}</p>
-          </div>
-          <p class="result-title capitalize">total acumulado</p>
-          <div class="result-container">
-            <p class="result-value">{{totalAcumulado}}</p>
-          </div>
-          <div class="buttons space_between mt_4">
-            <button
-              class="button btn-previous"
-              v-on:click="SetFormAction('Voltar')"
-            >
-              Voltar
-            </button>
-            <button class="button btn-next" v-on:click="SetFormAction('Reset')">
-              Reset
-            </button>
-          </div>
-        </div>
+        
         <div class="input_values">
           <h3 class="pb_2">Como funciona a fórmula de juros compostos?</h3>
           <p>
@@ -201,6 +117,10 @@
             mais vantajoso. Ele é bastante comum exatamente nesse segmento de
             investimentos, como a poupança.
           </p>
+          <h3 class="pb_2">Links para refência</h3>
+          <ul>
+            <li><a href="https://www3.bcb.gov.br/CALCIDADAO/publico/exibirFormFinanciamentoPrestacoesFixas.do?method=exibirFormFinanciamentoPrestacoesFixas">Calculadora do BACEN</a></li>
+          </ul>
         </div>
       </form>
     </div>
